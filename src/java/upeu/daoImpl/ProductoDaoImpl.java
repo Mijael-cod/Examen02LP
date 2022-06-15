@@ -10,60 +10,69 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+
 import upeu.config.Conexion;
-import upeu.dao.ClienteDAO;
-import upeu.entity.Clientes;
+import upeu.dao.ProductoDao;
+import upeu.entity.Productos;
 
 /**
  *
  * @author alarc
  */
-public class ClientesDAOImlp implements ClienteDAO{
-private PreparedStatement ps;
+public class ProductoDaoImpl implements ProductoDao {
+
+    private PreparedStatement ps;
     private ResultSet rs;
     private Connection cx;
+
     @Override
-    public int create(Clientes clientes) {
+    public int create(Productos p) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int update(Clientes clientes) {
+    public int update(Productos p) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int delete(int idcliente) {
+    public int delete(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public Clientes read(int idcliente) {
+    public Productos read(int id) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
-    public List<Clientes> readAll() {String SQL = "SELECT clientes.idcliente, clientes.direccion, clientes.hobby, clientes.correo, clientes.idpersona, personas.nombres FROM clientes, personas";
-        List<Clientes> lista = new ArrayList<>();
+    public List<Productos> readAll() {
+        String SQL = "Select * from productos";
+        List<Productos> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();
             ps = cx.prepareStatement(SQL);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Clientes s = new Clientes();
-                s.setIdcliente(rs.getInt("idcliente"));
-                s.setDireccion(rs.getString("direccion"));
-                s.setHobby(rs.getString("hobby"));
-                s.setCorreo(rs.getString("correo"));
-                s.setIdpersona(rs.getInt("idpersona"));
-                s.setNombre(rs.getString("nombres"));
-           
-                lista.add(s);
+                Productos d = new Productos();
+                d.setIdproducto(rs.getInt("idproducto"));
+                d.setNombre(rs.getString("nombre"));
+                d.setPrecio(rs.getInt("precio"));
+                d.setStock(rs.getDouble("stock"));
+                d.setIdcategoria(rs.getInt("idcategoria"));
+
+                lista.add(d);
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
         return lista;
     }
+    }
+
+   
     
-}

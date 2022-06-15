@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label for="sucursal" style="background-color:  white; color:#721c24 ">Sucursal:</label>
                         <i class="fa-solid fa-apple-whole"></i>
-                        <select name="producto" id="producto" class="form-control">
+                        <select name="sucursal" id="sucursal" class="form-control">
                             <option value="0">Seleccionar Sucursal</option>
                         </select>
                     </div>
@@ -61,7 +61,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="sucursal" style="background-color: white">Cliente:</label>
-                        <select name="producto" id="clientes" class="form-control">
+                        <select name="cliente" id="clientes" class="form-control">
                             <option value="0">Seleccionar Cliente</option>
                         </select>
                     </div>
@@ -79,7 +79,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="sucursal" style="background-color: white">Producto:</label>
-                        <select name="producto" id="producto" class="form-control">
+                        <select name="producto" id="productos" class="form-control">
                             <option value="0">Seleccionar Producto</option>
                         </select>
                     </div>
@@ -106,13 +106,13 @@
                     </select>
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Producto">
+                    <input id="productosP" type="text" class="form-control" placeholder="Producto" readonly="readonly">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Precio">
+                    <input type="text" class="form-control" placeholder="Precio" readonly="readonly">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Stock">
+                    <input type="text" class="form-control" placeholder="Stock" readonly="readonly">
                 </div>
                 <div class="col">
                     <button type="button" class="btn btn-success">Registrar Venta</button>

@@ -28,6 +28,10 @@
         <servlet-name>Tablitauwu</servlet-name>
         <servlet-class>upeu.controller.TablitauwuController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ProductosController</servlet-name>
+        <servlet-class>upeu.controller.ProductosController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeController</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -55,6 +59,10 @@
     <servlet-mapping>
         <servlet-name>Tablitauwu</servlet-name>
         <url-pattern>/Tablitauwu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProductosController</servlet-name>
+        <url-pattern>/ProductosController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

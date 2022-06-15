@@ -19,5 +19,5 @@ public interface ProductoDao {
     int delete(int id);
     Productos read(int id);
     List<Productos> readAll();
-    List<Map<String, Object>> readAll2();
+  
 }

@@ -18,6 +18,6 @@ public class Productos {
     private int idproducto;
     private String nombre;
     private int precio;
-    private String stock;
+    private double stock;
     private int idcategoria;
 }
