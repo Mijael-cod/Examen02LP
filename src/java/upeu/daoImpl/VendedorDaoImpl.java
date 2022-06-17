@@ -11,57 +11,55 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import upeu.config.Conexion;
-import upeu.dao.ClienteDAO;
-import upeu.entity.Clientes;
+import upeu.dao.VendedorDAO;
+import upeu.entity.Vendedor;
 
 
-public class ClientesDAOImlp implements ClienteDAO{
-private PreparedStatement ps;
+
+public class VendedorDaoImpl implements VendedorDAO {
+    private PreparedStatement ps;
     private ResultSet rs;
     private Connection cx;
+
     @Override
-    public int create(Clientes clientes) {
+    public int create(Vendedor vendedores) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int update(Clientes clientes) {
+    public int update(Vendedor vendedores) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int delete(int idcliente) {
+    public int delete(int idvendedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public Clientes read(int idcliente) {
+    public Vendedor read(int idvendedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public List<Clientes> readAll() {String SQL = "SELECT clientes.idcliente, clientes.direccion, clientes.hobby, clientes.correo, clientes.idpersona, personas.nombres FROM clientes, personas";
-        List<Clientes> lista = new ArrayList<>();
+    public List<Vendedor> readAll() {
+        String SQL = "Select vendedor.idvendedor, vendedor.idpersona, vendedor.nombres from vendedor";
+        List<Vendedor> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();
             ps = cx.prepareStatement(SQL);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Clientes s = new Clientes();
-                s.setIdcliente(rs.getInt("idcliente"));
-                s.setNombre(rs.getString("nombres"));
-                s.setDireccion(rs.getString("direccion"));
-                s.setHobby(rs.getString("hobby"));
-                s.setCorreo(rs.getString("correo"));
-                s.setIdpersona(rs.getInt("idpersona"));
-                
-           
-                lista.add(s);
+                Vendedor a = new Vendedor();
+                a.setIdvendedor(rs.getInt("idvendedor"));
+                a.setIdpersona(rs.getInt("idpersona"));
+                a.setNombres(rs.getString("nombres"));
+                lista.add(a);
             }
         } catch (SQLException e) {
             System.out.println("Error: " + e);
         }
         return lista;
     }
-    
+
 }

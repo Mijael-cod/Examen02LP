@@ -10,8 +10,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
+
 public class Categorias {
     private int idcategoria;
     private String nombre;
     private String estado;
 }
+
+

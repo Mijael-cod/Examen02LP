@@ -10,11 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <script src="https://kit.fontawesome.com/3c0bd07c85.js" crossorigin="anonymous"></script>
-        <title>Categoria</title>
+        <title>Examen</title>
         <%@include file="../WEB-INF/plantilla/head.jspf" %>
     </head>
     <body>
-        <%@include file="../WEB-INF/plantilla/header.jspf" %>
+        
         <div class="container pt-2">
            
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -51,7 +51,6 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="sucursal" style="background-color:  white; color:#721c24 ">Sucursal:</label>
-                        <i class="fa-solid fa-apple-whole"></i>
                         <select name="sucursal" id="sucursal" class="form-control">
                             <option value="0">Seleccionar Sucursal</option>
                         </select>
@@ -61,7 +60,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="sucursal" style="background-color: white">Cliente:</label>
-                        <select name="cliente" id="clientes" class="form-control">
+                        <select name="cliente" id="cliente" class="form-control">
                             <option value="0">Seleccionar Cliente</option>
                         </select>
                     </div>
@@ -70,14 +69,15 @@
                 <div class="col">
                     <div class="form-group">
                         <label for="sucursal" style="background-color: white">Vendedor:</label>
-                        <select name="producto" id="producto" class="form-control">
+                        <select name="producto" id="vendedorxd" class="form-control">
                             <option value="0">Seleccionar Vendedor</option>
                         </select>
                     </div>
 
                 </div>
-                <div class="col">
-                    <div class="form-group">
+                <div class="col"">
+                    
+                    <div class="form-group" >
                         <label for="sucursal" style="background-color: white">Producto:</label>
                         <select name="producto" id="productos" class="form-control">
                             <option value="0">Seleccionar Producto</option>
@@ -90,12 +90,14 @@
             </div>
             <div class="row col-1 col-lg-1">
 
-                <button class="btn btn-danger" type="submit">Agregar</button>
+                <button class="btn btn-danger" type="submit" id="agregar">Agregar</button>
 
             </div>
             <div class="row pt-4">
                 <div class="col">
+                    <label for="sucursal" style="background-color:  white; color:#721c24 ">Cantidad:</label>
                     <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    
                         <option selected>Cantidad</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -106,25 +108,32 @@
                     </select>
                 </div>
                 <div class="col">
-                    <input id="productosP" type="text" class="form-control" placeholder="Producto" readonly="readonly">
+                    <label for="sucursal" style="background-color:  white; color:#721c24 ">Producto:</label>
+                    <input id="productoP" type="text" class="form-control"  readonly="readonly" value="">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Precio" readonly="readonly">
+                    <label for="sucursal" style="background-color:  white; color:#721c24 ">Precio:</label>
+                    <input id="precioP" type="text" class="form-control"  readonly="readonly" value="">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Stock" readonly="readonly">
+                    <label for="sucursal" style="background-color:  white; color:#721c24 ">Stock:</label>
+                    <input id="stockP" type="text" class="form-control"  readonly="readonly" value="">
+                    
                 </div>
                 <div class="col">
-                    <button type="button" class="btn btn-success">Registrar Venta</button>
+                    <br>
+                    <button type="button" class="btn btn-success" style="margin-top: 8px">Registrar Venta</button>
                 </div>
-            </div>    
+            </div>      
             <br>
-            <table class="table w-75" id="tablita">
+            <br>
+            <table class="table w-75 table-striped table-hover" id="tablita">
             <thead>
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">ID</th>
                     <th scope="col">SUCURSAL</th>
+                    <th scope="col">CLIENTE</th>
                     <th scope="col">VENDEDOR</th>
                      <th scope="col">FECHA</th>
                     <th scope="col" colspan="2">Detalle venta</th>
@@ -136,6 +145,6 @@
             
         </div>
         <%@include file="../WEB-INF/plantilla/footer.jspf" %>
-        <script src="js/cate.js"></script>  
+        <script src="js/funciones.js"></script> 
     </body>
 </html>

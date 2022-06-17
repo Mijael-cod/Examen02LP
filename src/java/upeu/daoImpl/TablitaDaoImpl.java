@@ -12,24 +12,21 @@ import java.util.ArrayList;
 import java.util.List;
 import upeu.config.Conexion;
 import upeu.dao.TablitaDAO;
-import upeu.entity.Tablitauwu;
+import upeu.entity.Tablita;
 
-/**
- *
- * @author alarc
- */
+
 public class TablitaDaoImpl implements TablitaDAO{
 private PreparedStatement ps;
     private ResultSet rs;
     private Connection cx;
 
     @Override
-    public int create(Tablitauwu tablita) {
+    public int create(Tablita tablita) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public int update(Tablitauwu tablita) {
+    public int update(Tablita tablita) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
@@ -39,26 +36,26 @@ private PreparedStatement ps;
     }
 
     @Override
-    public Tablitauwu read(int idventa) {
+    public Tablita read(int idventa) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
     @Override
-    public List<Tablitauwu> readAll() {
+    public List<Tablita> readAll() {
         
-        String SQL = "SELECT ventas.idventa AS \"id\", sucursales.direccion AS \"sucursal\",personas.nombres AS \"vendedor\",ventas.fecha AS \"fecha\" FROM ventas,sucursales,personas ORDER BY 1";
-        List<Tablitauwu> lista = new ArrayList<>();
+        String SQL = "SELECT ventas.idventa AS \"id\", sucursales.direccion AS \"sucursal\",vendedor.nombres AS \"vendedor\",personas.nombres AS \"cliente\",ventas.fecha AS \"fecha\" FROM ventas,sucursales,personas,vendedor ORDER BY 1";
+        List<Tablita> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();
             ps = cx.prepareStatement(SQL);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Tablitauwu v = new Tablitauwu();
+                Tablita v = new Tablita();
                 v.setIdventa(rs.getInt("id"));
                 v.setSucursal(rs.getString("sucursal"));
                 v.setVendedor(rs.getString("vendedor"));
-                
                 v.setFecha(rs.getString("fecha"));
+                
 
                 lista.add(v);
             }

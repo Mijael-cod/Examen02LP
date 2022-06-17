@@ -7,10 +7,7 @@ package upeu.dao;
 import java.util.List;
 import upeu.entity.Clientes;
 
-/**
- *
- * @author alarc
- */
+
 public interface ClienteDAO {
 
     int create(Clientes clientes);
@@ -22,4 +19,5 @@ public interface ClienteDAO {
     Clientes read(int idcliente);
 
     List<Clientes> readAll();
+    
 }

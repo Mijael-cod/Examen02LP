@@ -5,16 +5,18 @@
 package upeu.dao;
 
 import java.util.List;
-import upeu.entity.Tablita;
+import upeu.entity.Vendedor;
 
-public interface TablitaDAO {
-     int create(Tablita tablita);
 
-    int update(Tablita tablita);
+public interface VendedorDAO {
 
-    int delete(int idventa);
+    int create(Vendedor vendedor);
 
-    Tablita read(int idventa);
+    int update(Vendedor vendedor);
 
-    List<Tablita> readAll();
+    int delete(int idvendedor);
+
+    Vendedor read(int idvendedor);
+
+    List<Vendedor> readAll();
 }

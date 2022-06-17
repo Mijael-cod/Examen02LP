@@ -7,10 +7,7 @@ package upeu.dao;
 import java.util.List;
 import upeu.entity.Sucursales;
 
-/**
- *
- * @author alarc
- */
+
 public interface SucursalDAO  {
       int create(Sucursales sucursales);
     int update(Sucursales sucursales);

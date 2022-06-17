@@ -10,9 +10,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Empleados {
-    private String cargo;
-    
-    
-    
+public class Vendedor {
+    private int idvendedor;
+    private int idpersona;
+    private String nombres;
+   
 }

@@ -7,10 +7,7 @@ package upeu.dao;
 import java.util.List;
 import upeu.entity.Detalles;
 
-/**
- *
- * @author alarc
- */
+
 public interface DetallesDAO {
      int create(Detalles detalles);
     int update(Detalles detalles);

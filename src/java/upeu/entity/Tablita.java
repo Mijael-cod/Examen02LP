@@ -12,12 +12,13 @@ import lombok.Setter;
 @Getter
 @Setter
 
-public class Tablitauwu {
+public class Tablita {
    private int idventa;
    private String sucursal;
    private String vendedor;
    private String cliente;
    private String fecha;
+   private String nombres;
    
           
 }

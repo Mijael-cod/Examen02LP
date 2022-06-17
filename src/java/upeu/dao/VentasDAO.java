@@ -7,10 +7,6 @@ package upeu.dao;
 import java.util.List;
 import upeu.entity.Ventas;
 
-/**
- *
- * @author alarc
- */
 public interface VentasDAO {
      int create(Ventas ventas);
     int update(Ventas ventas);

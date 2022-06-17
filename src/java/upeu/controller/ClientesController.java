@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import upeu.dao.ClienteDAO;
 import upeu.daoImpl.ClientesDAOImlp;
 
-/**
- *
- * @author alarc
- */
+
 public class ClientesController extends HttpServlet {
 
     private ClienteDAO dao = new ClientesDAOImlp();

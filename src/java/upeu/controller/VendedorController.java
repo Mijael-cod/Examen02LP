@@ -1,14 +1,24 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
 package upeu.controller;
 
+import com.google.gson.Gson;
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import upeu.dao.VendedorDAO;
+import upeu.daoImpl.VendedorDaoImpl;
 
-
-public class HomeController extends HttpServlet {
+/**
+ *
+ * @author Mijael
+ */
+public class VendedorController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -19,11 +29,16 @@ public class HomeController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    private VendedorDAO dao = new VendedorDaoImpl();
+    private Gson gson = new Gson();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        RequestDispatcher rd = request.getRequestDispatcher("views/index.jsp");
-        rd.forward(request, response);
+         PrintWriter out = response.getWriter();
+        int ve = Integer.parseInt(request.getParameter("opc"));
+        switch(ve){
+            case 1: out.println(gson.toJson(dao.readAll()));
+                break;}
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

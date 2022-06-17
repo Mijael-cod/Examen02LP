@@ -15,10 +15,7 @@ import upeu.config.Conexion;
 import upeu.dao.ProductoDao;
 import upeu.entity.Productos;
 
-/**
- *
- * @author alarc
- */
+
 public class ProductoDaoImpl implements ProductoDao {
 
     private PreparedStatement ps;

@@ -1,4 +1,3 @@
-
 package upeu.entity;
 
 import lombok.AllArgsConstructor;
@@ -11,9 +10,12 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Clientes {
+
     private int idcliente;
- private String direccion;
- private String hobby;
- private String correo;
- private int idpersona;
+    private String nombre;
+    private String direccion;
+    private String hobby;
+    private String correo;
+    private int idpersona;
+
 }

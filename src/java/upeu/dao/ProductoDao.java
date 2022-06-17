@@ -5,14 +5,9 @@
 package upeu.dao;
 
 import java.util.List;
-import java.util.Map;
 import upeu.entity.Productos;
 
 
-/**
- *
- * @author admin
- */
 public interface ProductoDao {
     int create(Productos p);
     int update(Productos p);

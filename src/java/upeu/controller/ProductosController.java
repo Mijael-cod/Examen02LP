@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import upeu.dao.ProductoDao;
 import upeu.daoImpl.ProductoDaoImpl;
 
-/**
- *
- * @author alarc
- */
+
 public class ProductosController extends HttpServlet {
 
     private ProductoDao dao = new ProductoDaoImpl();

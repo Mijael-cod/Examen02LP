@@ -43,7 +43,7 @@ public class SucursalDaoImpl implements SucursalDAO{
     }
 
     @Override
-    public List<Sucursales> readAll() {  String SQL = "Select *from sucursales";
+    public List<Sucursales> readAll() {  String SQL = "Select * from sucursales";
         List<Sucursales> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();

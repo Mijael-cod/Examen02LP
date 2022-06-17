@@ -12,14 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import upeu.dao.TablitaDAO;
-
 import upeu.daoImpl.TablitaDaoImpl;
 
-/**
- *
- * @author alarc
- */
-public class TablitauwuController extends HttpServlet {
+
+public class TablitaController extends HttpServlet {
 
     private TablitaDAO dao = new TablitaDaoImpl();
     private Gson gson = new Gson();
