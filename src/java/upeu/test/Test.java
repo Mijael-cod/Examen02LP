@@ -41,6 +41,9 @@ static Gson g = new Gson();
         System.out.println("");
         System.out.println(gson.toJson(tablitaDAO.readAll()));
         
+        System.out.println("");
+        System.out.println("Hola mundo");
+        
         if(Conexion.getConexion()!=null){
             System.out.println("si");
         }else{

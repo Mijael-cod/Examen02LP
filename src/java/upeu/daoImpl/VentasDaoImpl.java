@@ -46,7 +46,7 @@ public class VentasDaoImpl implements VentasDAO {
 
     @Override
     public List<Ventas> readAll() {
-        String SQL = "Select *from ventas";
+        String SQL = "Select * from ventas";
         List<Ventas> lista = new ArrayList<>();
         try {
             cx = Conexion.getConexion();

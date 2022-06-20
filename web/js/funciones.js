@@ -20,7 +20,7 @@ function listarVentas() {
         for (let i = 0; i < x.length; i++) {
             $("#tablita").append(
                     "<tr><td>" + (i + 1) + "</td><td>" + x[i].idventa + "</td><td>" + x[i].sucursal +
-                    "</td><td>" + x[i].nombres + "</td><td>" +  x[i].vendedor + "</td><td>" + x[i].fecha + "</td><td><a href='#'> <i class='fa-solid fa-eye'></i> </a></td>");
+                    "</td><td>" + x[i].nombres + "</td><td>" +  x[i].vendedor + "</td><td>" + x[i].fecha + "</td><td><a href='#' data-target='#exampleModal' data-toggle='modal' > <i class='fa-solid fa-eye'></i> </a></td>");
         }
     });
 }
