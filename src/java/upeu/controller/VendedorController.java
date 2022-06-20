@@ -14,10 +14,6 @@ import javax.servlet.http.HttpServletResponse;
 import upeu.dao.VendedorDAO;
 import upeu.daoImpl.VendedorDaoImpl;
 
-/**
- *
- * @author Mijael
- */
 public class VendedorController extends HttpServlet {
 
     /**

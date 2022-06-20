@@ -14,10 +14,6 @@ import upeu.config.Conexion;
 import upeu.dao.VentasDAO;
 import upeu.entity.Ventas;
 
-/**
- *
- * @author alarc
- */
 public class VentasDaoImpl implements VentasDAO {
 
     private PreparedStatement ps;

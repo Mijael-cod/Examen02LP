@@ -14,11 +14,6 @@ import upeu.daoImpl.TablitaDaoImpl;
 import upeu.daoImpl.VendedorDaoImpl;
 
 
-
-/**
- *
- * @author admin
- */
 public class Test {
 
 static Gson g = new Gson();

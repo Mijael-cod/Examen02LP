@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 import upeu.dao.VentasDAO;
 import upeu.daoImpl.VentasDaoImpl;
 
-/**
- *
- * @author alarc
- */
+
 public class VentasController extends HttpServlet {
 
     private VentasDAO dao = new VentasDaoImpl();

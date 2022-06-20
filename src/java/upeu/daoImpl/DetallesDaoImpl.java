@@ -14,10 +14,6 @@ import upeu.config.Conexion;
 import upeu.dao.DetallesDAO;
 import upeu.entity.Detalles;
 
-/**
- *
- * @author alarc
- */
 public class DetallesDaoImpl implements DetallesDAO {
 
     private PreparedStatement ps;

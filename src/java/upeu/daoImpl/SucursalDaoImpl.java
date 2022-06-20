@@ -14,10 +14,7 @@ import upeu.config.Conexion;
 import upeu.dao.SucursalDAO;
 import upeu.entity.Sucursales;
 
-/**
- *
- * @author alarc
- */
+
 public class SucursalDaoImpl implements SucursalDAO{
     private PreparedStatement ps;
     private ResultSet rs;
