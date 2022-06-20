@@ -28,7 +28,6 @@ static Gson g = new Gson();
 
     public static void main(String[] args) {
         // TODO code application logic here
-
         
         System.out.println(gson.toJson(clienteDao.readAll()));
         System.out.println("");
